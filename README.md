@@ -70,4 +70,18 @@ public function rules()
 }
 ```
 
+
+**Money Validator**
+
+```php
+public function rules()
+{
+    return [
+        // ... 
+        ['amount', \yiier\validators\MoneyValidator::className()],
+        // code
+    ];
+}
+```
+
 ……
