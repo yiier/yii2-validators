@@ -38,7 +38,7 @@ public function rules()
 {
     return [
         // ... 
-        ['id_card', \yiier\validators\IdCardValidator::className()],
+        ['id_card', \yiier\validators\IdCardValidator::class],
         // code
     ];
 }
@@ -51,7 +51,7 @@ public function rules()
 {
     return [
         // ... 
-        ['product_ids', \yiier\validators\ArrayValidator::className()],
+        ['product_ids', \yiier\validators\ArrayValidator::class],
         // code
     ];
 }
@@ -64,7 +64,7 @@ public function rules()
 {
     return [
         // ... 
-        ['phone', \yiier\validators\PhoneValidator::className()],
+        ['phone', \yiier\validators\PhoneValidator::class],
         // code
     ];
 }
@@ -78,7 +78,8 @@ public function rules()
 {
     return [
         // ... 
-        ['amount', \yiier\validators\MoneyValidator::className()],
+        ['amount', \yiier\validators\MoneyValidator::class],
+        ['amount', \yiier\validators\MoneyValidator::class, 'allowsNegative' => true],
         // code
     ];
 }
